@@ -1,0 +1,213 @@
+.main {
+  padding-top: 8rem;
+  min-height: 100vh;
+}
+
+.bookingContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.step {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.step.active {
+  color: var(--primary);
+}
+
+.content {
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+.stepContent h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Step 1: Beauticians */
+.beauticianGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.beauticianCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.beauticianCard:hover {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.beauticianCard.selected {
+  border-color: var(--primary);
+  background: rgba(197, 160, 89, 0.1);
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+}
+
+.beauticianCard img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid transparent;
+}
+
+.beauticianCard.selected img {
+  border-color: var(--primary);
+}
+
+.bInfo h4 {
+  margin-bottom: 0.25rem;
+}
+
+.bInfo span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.rating {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+/* Step 2: Date & Time */
+.dateTimeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.datePicker label, .timePicker label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.datePicker input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: white;
+  color-scheme: dark;
+}
+
+.timeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.timeBtn {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.timeBtn:hover {
+  border-color: var(--primary);
+}
+
+.timeBtn.selected {
+  background: var(--primary);
+  color: var(--bg-dark);
+  border-color: var(--primary);
+}
+
+/* Step 3: Summary */
+.summary {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.summaryItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.summaryItem span {
+  color: var(--text-muted);
+}
+
+.total {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+/* Global Actions */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.backBtn {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nextBtn {
+  padding: 0.75rem 3rem;
+  border-radius: 50px;
+  background: var(--primary);
+  color: var(--bg-dark);
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.nextBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .dateTimeGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,116 @@
+.main {
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 8rem 0 6rem;
+  text-align: center;
+  background: radial-gradient(circle at top, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
+}
+
+.heroContent h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.btnPrimary {
+  background: var(--primary);
+  color: var(--bg-dark);
+}
+
+.btnPrimary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+}
+
+.btnSecondary {
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+}
+
+.btnSecondary:hover {
+  background: var(--glass-border);
+  transform: translateY(-2px);
+}
+
+.features {
+  padding: 6rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.card p {
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 3.5rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

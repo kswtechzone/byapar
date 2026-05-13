@@ -1,0 +1,96 @@
+.main {
+  padding-top: 8rem;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  padding-bottom: 6rem;
+}
+
+.bookingCard {
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.pending { background: rgba(255, 193, 7, 0.1); color: #ffc107; }
+.inprogress { background: rgba(0, 123, 255, 0.1); color: #007bff; }
+.completed { background: rgba(40, 167, 69, 0.1); color: #28a745; }
+
+.bBody h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bBody p {
+  color: var(--text-muted);
+}
+
+.bFooter {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.completeBtn {
+  flex: 1;
+  background: var(--primary);
+  color: var(--bg-dark);
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.detailBtn {
+  flex: 1;
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.completeBtn:hover {
+  background: var(--primary-hover);
+}
+
+.detailBtn:hover {
+  background: var(--glass-bg);
+  color: var(--text-main);
+}
